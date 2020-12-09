@@ -135,7 +135,7 @@ section{
     display: flex;
     flex-flow:row nowrap;
     justify-content: flex-start; /*contenido que empieza al principio en la caja*/
-    align-items: flex-start;
+    align-items: center;
 
     /*CSS*/
     width: 80%;
@@ -145,13 +145,15 @@ section{
 }
 .naturafia h1{
     /*flexbox*/
-    align-items: center; 
+    display: flex;
+    justify-content: center;
+    
     /* Propietats CSS*/
     font-weight: 600;
     font-size: 3.5rem;
     margin:15px;
     color:white;
-    text-align: center;
+    
 }
 
 .naturafia p{
@@ -163,7 +165,7 @@ section{
     color:white;
     text-align: justify;
     margin-top:0px;
-    padding:0px 20px 20px 40px;
+    padding:0px 20px 20px 20px;
     
 }
 
@@ -238,16 +240,16 @@ section{
 /*___________________________BLOC PUBLICITAT / COL·LABORACIÓ________________________*/
 
 .publicitat{
-    /* Propietats Flexbox */
+     /* Propietats Flexbox */
     display: flex;
     flex-flow:row nowrap;
     justify-content: flex-start; /*contenido que empieza al principio en la caja*/
-    align-items: flex-start;
-    
+    align-items: center;
+
     /*CSS*/
     width: 80%;
-    /* margin:30px 30px 30px 30px;
-    padding: 40px 40px 40px 40px; */
+    
+    
     
 }
 
@@ -266,8 +268,7 @@ section{
 .publicitat p{
     justify-content: space-between;
     /*CSS*/
-    margin-top:0px;
-    padding:0px 20px 20px 40px;
+    padding:0px 20px 20px 20px;
     font-weight: 400;
     font-size: 1.2rem;
     text-align: flex-start;
@@ -398,6 +399,9 @@ footer{
     background-color: rgb(54, 136, 124);
 }
 
+
+
+
 /* ________________________________________ MEDIA QUERY________________________________________*/
 
 @media all and (max-width: 800px){ /* La pàgina de 0px a 800px realitzarà els següents canvis*/
@@ -442,24 +446,25 @@ footer{
 
 .contenidor{
     flex-direction: column;
-    justify-content: center;
     height: auto;
 }
 .naturafia{
     flex-direction: column;
-    justify-content: center;
     height: auto;
     width: 100%;
-    margin: 10px;
+    
 }
 .naturafia h1{
-    margin:0px 30px 0px 30px;
+    
     height: auto;
-}
+    text-align: center;
+    justify-items: center;
+}  
+
 .naturafia p{
-    margin:0px 30px 0px 30px;
-    padding-top:10px;
-    height: auto;
+    
+    text-align: left;
+    
 }
 /* ----------------BLOC FOTOS---------------------- */
 .fotos{
@@ -536,29 +541,36 @@ footer{
 /* ----------------BLOC PUBLICITAT---------------- */
 .publicitat{
     flex-direction: column;
-    justify-content: center;
     height: auto;
-    width: 100%;
-    margin: 10px;
+    width: 100%; 
 }
+
 .publicitat h1{
-    margin:0px 30px 0px 30px;
     height: auto;
-}
+    text-align: center;
+    justify-items: center;
+}  
+}  
+
 .publicitat p{
-    margin:0px 30px 0px 30px;
-    padding-top:10px;
-    height: auto;
+    text-align: left;
 }
 /*-----FOOTER-----*/
+.titol{
+    /*CSS*/
+    font-size: 1rem;
+    font-weight: 600;
+    list-style: none;  
+    color:white;
+    padding:0 0 25px 0px;
 
+}
 .information, .about{
     flex-direction: row ;
     justify-content: center;
     align-items: center;
     margin: 0px 0px 0px 0px;
     padding-right: 20px;
-    font-size: 0.9rem;
+    font-size: 0.6rem;
 }
 
-}
